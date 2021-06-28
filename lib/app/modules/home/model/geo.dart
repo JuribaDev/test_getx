@@ -1,5 +1,12 @@
+import 'package:hive/hive.dart';
+part 'geo.g.dart';
+
+@HiveType(typeId: 3)
 class GeoModel {
-  late double lat, lng;
+  @HiveField(0)
+  late String lat;
+  @HiveField(1)
+  late String lng;
 
   GeoModel({required this.lat, required this.lng});
 

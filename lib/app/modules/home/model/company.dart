@@ -1,5 +1,15 @@
+import 'package:hive/hive.dart';
+
+part 'company.g.dart';
+
+@HiveType(typeId: 2)
 class CompanyModel {
-  late String name, catchPharase, bs;
+  @HiveField(0)
+  late String name;
+  @HiveField(1)
+  late String catchPharase;
+  @HiveField(2)
+  late String bs;
 
   CompanyModel(
       {required this.name, required this.catchPharase, required this.bs});

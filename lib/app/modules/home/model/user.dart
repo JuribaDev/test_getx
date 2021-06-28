@@ -1,10 +1,26 @@
 import 'package:test_getx/app/modules/home/model/address.dart';
 import 'package:test_getx/app/modules/home/model/company.dart';
+import 'package:hive/hive.dart';
 
+part 'user.g.dart';
+
+@HiveType(typeId: 0)
 class UserModel {
+  @HiveField(0)
   late int id;
-  late String name, username, email, phone, website;
+  @HiveField(1)
+  late String name;
+  @HiveField(2)
+  late String username;
+  @HiveField(3)
+  late String email;
+  @HiveField(4)
+  late String phone;
+  @HiveField(5)
+  late String website;
+  @HiveField(6)
   late AddressModel addressModel;
+  @HiveField(7)
   late CompanyModel companyModel;
 
   UserModel(

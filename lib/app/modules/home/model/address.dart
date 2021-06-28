@@ -1,7 +1,19 @@
 import 'package:test_getx/app/modules/home/model/geo.dart';
+import 'package:hive/hive.dart';
 
+part 'address.g.dart';
+
+@HiveType(typeId: 1)
 class AddressModel {
-  late String street, suite, city, zipcode;
+  @HiveField(0)
+  late String street;
+  @HiveField(1)
+  late String suite;
+  @HiveField(2)
+  late String city;
+  @HiveField(3)
+  late String zipcode;
+  @HiveField(4)
   late GeoModel geo;
 
   AddressModel(
